@@ -9,8 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class HelloApp {
     public static void main(String[] args) {
 
-        ApplicationContext ctx = new ClassPathXmlApplicationContext(
-                "com/springinaction/springidol/spring-idol.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:spring-idol.xml");
         Performer performer = (Performer) ctx.getBean("duke");
         performer.perform();
     }
